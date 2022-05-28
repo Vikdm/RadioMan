@@ -10,7 +10,10 @@ public class RadioStationTest {
 
     @Test
     void StationPlusTest1() {
-        radioStation.setRadioStationPlus(8);
+        radioStation.setRadioStation(8);
+
+        radioStation.stPl1();
+
         int actual = radioStation.getRadioStation();
         int expected = 9;
         assertEquals(expected, actual);
@@ -18,7 +21,10 @@ public class RadioStationTest {
 
     @Test
     void StationPlusTest2() {
-        radioStation.setRadioStationPlus(9);
+        radioStation.setRadioStation(9);
+
+        radioStation.stPl1();
+
         int actual = radioStation.getRadioStation();
         int expected = 0;
         assertEquals(expected, actual);
@@ -26,137 +32,62 @@ public class RadioStationTest {
 
     @Test
     void StationPlusTest3() {
-        radioStation.setRadioStationPlus(0);
+        radioStation.setRadioStation(11);
+
         int actual = radioStation.getRadioStation();
-        int expected = 1;
+        int expected = 0;
         assertEquals(expected, actual);
     }
 
     @Test
     void StationPlusTest4() {
-        radioStation.setRadioStationPlus(10);
+        radioStation.setRadioStation(-11);
+
         int actual = radioStation.getRadioStation();
         int expected = 0;
         assertEquals(expected, actual);
     }
 
     @Test
-    void StationPlusTest5() {
-        radioStation.setRadioStationPlus(-1);
-        int actual = radioStation.getRadioStation();
-        int expected = 0;
-        assertEquals(expected, actual);
-    }
+    void StationMinusTest() {
+        radioStation.setRadioStation(0);
 
-    @Test
-    void StationPlusTest6() {
-        radioStation.setRadioStationPlus(1);
-        int actual = radioStation.getRadioStation();
-        int expected = 2;
-        assertEquals(expected, actual);
-    }
+        radioStation.stMin1();
 
-    @Test
-    void StationPlusTest7() {
-        radioStation.setRadioStationPlus(11);
         int actual = radioStation.getRadioStation();
-        int expected = 0;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void StationMinusTest1() {
-        radioStation.setRadioStationMinus(0);
-        int actual = radioStation.getRadioStationMinus();
         int expected = 9;
         assertEquals(expected, actual);
     }
 
     @Test
     void StationMinusTest2() {
-        radioStation.setRadioStationMinus(1);
-        int actual = radioStation.getRadioStationMinus();
-        int expected = 0;
-        assertEquals(expected, actual);
-    }
+        radioStation.setRadioStation(5);
 
-    @Test
-    void StationMinusTest3() {
-        radioStation.setRadioStationMinus(2);
-        int actual = radioStation.getRadioStationMinus();
-        int expected = 1;
-        assertEquals(expected, actual);
-    }
+        radioStation.stMin1();
 
-    @Test
-    void StationMinusTest4() {
-        radioStation.setRadioStationMinus(3);
-        int actual = radioStation.getRadioStationMinus();
-        int expected = 2;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void StationMinusTest5() {
-        radioStation.setRadioStationMinus(4);
-        int actual = radioStation.getRadioStationMinus();
-        int expected = 3;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void StationMinusTest6() {
-        radioStation.setRadioStationMinus(5);
-        int actual = radioStation.getRadioStationMinus();
+        int actual = radioStation.getRadioStation();
         int expected = 4;
         assertEquals(expected, actual);
     }
 
     @Test
-    void StationMinusTest7() {
-        radioStation.setRadioStationMinus(6);
-        int actual = radioStation.getRadioStationMinus();
-        int expected = 5;
-        assertEquals(expected, actual);
-    }
+    void StationMinusTest3() {
+        radioStation.setRadioStation(20);
 
-    @Test
-    void StationMinusTest8() {
-        radioStation.setRadioStationMinus(7);
-        int actual = radioStation.getRadioStationMinus();
-        int expected = 6;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void StationMinusTest9() {
-        radioStation.setRadioStationMinus(8);
-        int actual = radioStation.getRadioStationMinus();
-        int expected = 7;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void StationMinusTest10() {
-        radioStation.setRadioStationMinus(9);
-        int actual = radioStation.getRadioStationMinus();
-        int expected = 8;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void StationMinusTest11() {
-        radioStation.setRadioStationMinus(10);
-        int actual = radioStation.getRadioStationMinus();
+        int actual = radioStation.getRadioStation();
         int expected = 0;
         assertEquals(expected, actual);
     }
 
     @Test
-    void StationMinusTest12() {
-        radioStation.setRadioStationMinus(-1);
-        int actual = radioStation.getRadioStationMinus();
+    void StationMinusTest4() {
+        radioStation.setRadioStation(-20);
+
+        int actual = radioStation.getRadioStation();
         int expected = 0;
         assertEquals(expected, actual);
     }
 }
+
+
+

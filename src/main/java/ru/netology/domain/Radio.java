@@ -5,71 +5,67 @@ public class Radio {
     private int radioStation;
     private int radioVolume;
 
-    public void setRadioVolumePlus(int radioVolume) {
+    public void setRadioVolume(int radioVolume) {
+        if (radioVolume < 0) {
+            return;
+        }
+        if (radioVolume > 10) {
+            return;
+        }
         if (radioVolume == 10) {
             this.radioVolume = 10;
             return;
         }
-        if (0 <= radioVolume && radioVolume <= 10) {
-            this.radioVolume = radioVolume + 1;
-        }
-    }
-
-    public int getRadioVolumePlus() {
-        return radioVolume;
-    }
-
-    public void setRadioVolumeMinus(int radioVolume) {
         if (radioVolume == 0) {
             this.radioVolume = 0;
             return;
         }
-        if (0 <= radioVolume && radioVolume <= 10) {
-            this.radioVolume = radioVolume - 1;
-        }
+        this.radioVolume = radioVolume;
     }
 
-    public int getRadioVolumeMinus() {
+    public void volPl1() {
+        int newVolPl1 = radioVolume + 1;
+        setRadioVolume(newVolPl1);
+    }
+
+    public void volMin1() {
+        int newVolMin1 = radioVolume - 1;
+        setRadioVolume(newVolMin1);
+    }
+
+    public int getRadioVolume() {
         return radioVolume;
     }
 
-    public void setRadioStationPlus(int radioStation) {
+    public void setRadioStation(int radioStation) {
         if (radioStation > 10) {
             return;
         }
-        if (radioStation < 0) {
+        if (radioStation < -1) {
             return;
         }
-        if (radioStation <= 9) {
-            this.radioStation = radioStation + 1;
-        }
-        if (radioStation == 9) {
+        if (radioStation == 10) {
             this.radioStation = 0;
+            return;
         }
+        if (radioStation == -1) {
+            this.radioStation = 9;
+            return;
+        }
+        this.radioStation = radioStation;
+    }
+
+    public void stPl1() {
+        int newStationP1 = radioStation + 1;
+        setRadioStation(newStationP1);
+    }
+
+    public void stMin1() {
+        int newStationMin1 = radioStation - 1;
+        setRadioStation(newStationMin1);
     }
 
     public int getRadioStation() {
         return radioStation;
     }
-
-    public void setRadioStationMinus(int radioStation) {
-        if (-1 >= radioStation) {
-            return;
-        }
-        if (radioStation >= 10) {
-            return;
-        }
-        if (radioStation == 0) {
-            this.radioStation = 9;
-            return;
-        } else {
-            this.radioStation = radioStation - 1;
-        }
-    }
-
-    public int getRadioStationMinus() {
-        return radioStation;
-    }
 }
-
-
