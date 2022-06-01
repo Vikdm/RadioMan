@@ -1,7 +1,9 @@
 package ru.netology.domain;
 
-public class Radio {
+import lombok.Data;
 
+@Data
+public class Radio {
     private int radioStation;
     private int radioVolume;
     private int quantityRadioStation = 10;
@@ -35,9 +37,9 @@ public class Radio {
         setRadioStation(newStationMin1);
     }
 
-    public int getRadioStation() {
-        return radioStation;
-    }
+//    public int getRadioStation() {
+//        return radioStation;
+//    }
 
     public void setRadioVolume(int radioVolume) {
         if (radioVolume < 0) {
@@ -57,17 +59,17 @@ public class Radio {
         this.radioVolume = radioVolume;
     }
 
-    public void volPl1() {
-        int newVolPl1 = radioVolume + 1;
-        setRadioVolume(newVolPl1);
-    }
+        public void volPl1 () {
+            int newVolPl1 = radioVolume + 1;
+            setRadioVolume(newVolPl1);
+        }
 
-    public void volMin1() {
-        int newVolMin1 = radioVolume - 1;
-        setRadioVolume(newVolMin1);
-    }
+        public void volMin1 () {
+            int newVolMin1 = radioVolume - 1;
+            setRadioVolume(newVolMin1);
+        }
 
-    public int getRadioVolume() {
-        return radioVolume;
-    }
+//    public int getRadioVolume() {
+//        return radioVolume;
+//    }
 }
