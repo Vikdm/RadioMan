@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RadioStationTest {
 
-    Radio radioStation = new Radio();
+    Radio radioStation = new Radio(10);
 
     @Test
     void StationPlusTest1() {

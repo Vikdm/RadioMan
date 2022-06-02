@@ -4,8 +4,13 @@ public class Radio {
 
     private int radioStation;
     private int radioVolume;
-    private int quantityRadioStation = 10;
+    int quantityRadioStation;
 
+    public Radio(int quantityRadioStation) {
+        this.quantityRadioStation = quantityRadioStation;
+    }
+    public Radio() {
+    }
 
     public void setRadioStation(int radioStation) {
         if (radioStation > quantityRadioStation) {
