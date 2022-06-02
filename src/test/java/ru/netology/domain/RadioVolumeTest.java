@@ -40,7 +40,7 @@ public class RadioVolumeTest {
     }
 
     @Test
-    void volumeMinusTest () {
+    void volumeMinusTest() {
         radioVolume.setRadioVolume(5);
 
         radioVolume.volMin1();
@@ -49,7 +49,7 @@ public class RadioVolumeTest {
     }
 
     @Test
-    void volumeMinusTest2 () {
+    void volumeMinusTest2() {
         radioVolume.setRadioVolume(0);
 
         radioVolume.volMin1();
@@ -58,21 +58,21 @@ public class RadioVolumeTest {
     }
 
     @Test
-    void volumeMinusTest3 () {
+    void volumeMinusTest3() {
         radioVolume.setRadioVolume(-5);
 
         assertEquals(0, radioVolume.getRadioVolume());
     }
 
     @Test
-    void volumeMinusTest4 () {
+    void volumeMinusTest4() {
         radioVolume.setRadioVolume(120);
 
         assertEquals(0, radioVolume.getRadioVolume());
     }
 
     @Test
-    void volumeMinusTest5 () {
+    void volumeMinusTest5() {
         radioVolume.setRadioVolume(10);
 
         radioVolume.volMin1();
